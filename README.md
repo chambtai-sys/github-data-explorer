@@ -1,73 +1,144 @@
-# Welcome to your Lovable project
+# GitHub Project Data Viewer
 
-## Project info
+A sleek, modern web application to explore and visualize detailed insights about any public GitHub repository.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+![GitHub Data Viewer](https://img.shields.io/badge/React-18-blue?logo=react) ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript) ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38bdf8?logo=tailwindcss) ![Vite](https://img.shields.io/badge/Vite-5-646cff?logo=vite)
 
-## How can I edit this code?
+## ✨ Features
 
-There are several ways of editing your application.
+- **Repository Search** — Enter any GitHub URL or `owner/repo` format
+- **Comprehensive Stats** — Stars, forks, watchers, issues, language, license, size, and last push date
+- **Top Contributors** — Visual breakdown with contribution bars
+- **Recent Commits** — Latest commits with author info and timestamps
+- **Languages Chart** — Color-coded breakdown of repository languages
+- **Beautiful UI** — Dark theme with smooth animations and glass-morphism effects
 
-**Use Lovable**
+## 🚀 Quick Start
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### Prerequisites
 
-Changes made via Lovable will be committed automatically to this repo.
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- npm, yarn, pnpm, or bun
 
-**Use your preferred IDE**
+### Installation
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+```bash
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+# Navigate to project directory
+cd YOUR_REPO_NAME
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+# Install dependencies
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
 ```
 
-**Edit a file directly in GitHub**
+### Running Locally
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+# Start the development server
+npm run dev
 
-**Use GitHub Codespaces**
+# The app will be available at http://localhost:5173
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Building for Production
 
-## What technologies are used for this project?
+```bash
+# Create production build
+npm run build
 
-This project is built with:
+# Preview the production build locally
+npm run preview
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🛠️ Tech Stack
 
-## How can I deploy this project?
+- **Framework:** [React 18](https://react.dev/) with [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components:** [shadcn/ui](https://ui.shadcn.com/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Date Formatting:** [date-fns](https://date-fns.org/)
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+## 📁 Project Structure
 
-## Can I connect a custom domain to my Lovable project?
+```
+src/
+├── components/        # React components
+│   ├── CommitsList.tsx
+│   ├── ContributorsList.tsx
+│   ├── LanguagesChart.tsx
+│   ├── LoadingSkeleton.tsx
+│   ├── RepoHeader.tsx
+│   ├── SearchInput.tsx
+│   ├── StatsGrid.tsx
+│   └── ui/            # shadcn/ui components
+├── hooks/             # Custom React hooks
+│   └── useGitHubData.ts
+├── pages/             # Page components
+│   └── Index.tsx
+├── types/             # TypeScript type definitions
+│   └── github.ts
+├── lib/               # Utility functions
+└── index.css          # Global styles & design tokens
+```
 
-Yes, you can!
+## 🔧 Available Scripts
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+| Script | Description |
+|--------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint |
+| `npm run test` | Run tests |
+| `npm run test:watch` | Run tests in watch mode |
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## ⚠️ GitHub API Rate Limits
+
+This app uses the GitHub REST API without authentication, which has the following limits:
+
+- **60 requests per hour** for unauthenticated requests
+
+If you need higher limits, you can implement GitHub OAuth or use a personal access token.
+
+## 🎨 Customization
+
+### Design System
+
+The app uses CSS custom properties for theming. Modify `src/index.css` to customize:
+
+- Colors and gradients
+- Typography
+- Animations
+- Glass effects
+
+### Adding Features
+
+The codebase is modular and easy to extend. Common enhancements:
+
+- Add authentication for higher API limits
+- Implement repository comparison
+- Add activity graphs with Recharts
+- Save favorite repositories
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🙏 Acknowledgments
+
+- Data provided by the [GitHub REST API](https://docs.github.com/en/rest)
+- UI components from [shadcn/ui](https://ui.shadcn.com/)
+- Icons from [Lucide](https://lucide.dev/)
+
+---
+
+Made with ❤️ using [Lovable](https://lovable.dev)
