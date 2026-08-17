@@ -24,10 +24,10 @@ A sleek, modern web application to explore and visualize detailed insights about
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+git clone https://github.com/chambtai-sys/github-data-explorer.git
 
 # Navigate to project directory
-cd YOUR_REPO_NAME
+cd github-data-explorer
 
 # Install dependencies
 npm install
